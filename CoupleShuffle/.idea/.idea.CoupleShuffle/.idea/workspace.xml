@@ -3,20 +3,27 @@
   <component name="ChangeListManager">
     <list default="true" id="5f2ace3c-4544-4b13-805a-7091ddaf1b1d" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.CoupleShuffle/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.CoupleShuffle/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AnimatorControllers/leftAnim.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AnimatorControllers/leftAnim.controller" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AnimatorControllers/rightAnim.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AnimatorControllers/rightAnim.controller" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Joystick/DynamicJoystick.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Joystick/DynamicJoystick.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Joystick/Joystick.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Joystick/Joystick.cs.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/CharacterController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/CharacterController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/MoneyMover.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/MoneyMover.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/DynamicsManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/DynamicsManager.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Bezier.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -69,7 +76,7 @@
       <workItem from="1650551064242" duration="102000" />
       <workItem from="1650551348730" duration="14000" />
       <workItem from="1650551414603" duration="27000" />
-      <workItem from="1650551514172" duration="1666000" />
+      <workItem from="1650551514172" duration="14949000" />
     </task>
     <servers />
   </component>

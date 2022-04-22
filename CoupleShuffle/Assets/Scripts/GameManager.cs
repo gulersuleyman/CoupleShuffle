@@ -55,5 +55,18 @@ public class GameManager : MonoBehaviour
         rightScore -= i;
         OnRightScoreChanged?.Invoke(rightScore);
     }
-    
+
+    public IEnumerator SpendMoney()
+    {
+        int score = totalScore;
+        for (int i = 0; i < score; i++)
+        {
+            totalScore--;
+            Debug.Log(totalScore);
+            yield return new WaitForSeconds(0.1f);
+        }
+
+        yield return null;
+
+    }
 }

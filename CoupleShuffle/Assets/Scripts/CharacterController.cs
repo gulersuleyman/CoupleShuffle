@@ -19,6 +19,7 @@ public class CharacterController : MonoBehaviour
 
     private int leftCount = 4;
     private int rightCount = 4;
+    private bool spending = false;
     
     private CinemachineVirtualCamera _vcam;
     private AnimationController _animationController;
@@ -71,9 +72,27 @@ public class CharacterController : MonoBehaviour
             rightCanvas.gameObject.SetActive(false);
             MoveMoniesToCase();
             GameManager.Instance.totalScore = GameManager.Instance.rightScore + GameManager.Instance.leftScore;
-            Debug.Log(GameManager.Instance.totalScore);
+            
+        }
+
+        if (other.gameObject.CompareTag("Spend"))
+        {
+            
+            spending = true;
+            if (spending)
+            {
+                StartCoroutine(GameManager.Instance.SpendMoney());
+            }
         }
     }
+
+  /*  private void OnTriggerExit(Collider other)
+    {
+        if (other.gameObject.CompareTag("Spend"))
+        {
+            spending = false;
+        }
+    }*/
 
     void MoveMoniesToCase()
     {

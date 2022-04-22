@@ -28,4 +28,10 @@ public class AnimationController : MonoBehaviour
 
         _animator.SetBool("isIdle", isIdle);
     }
+    public void BendAnimation(Animator _animator,bool isBending)
+    {
+        if (isBending == _animator.GetBool("isBending")) return;
+
+        _animator.SetBool("isBending", isBending);
+    }
 }

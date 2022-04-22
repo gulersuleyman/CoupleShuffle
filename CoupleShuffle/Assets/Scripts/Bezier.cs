@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-[ExecuteInEditMode]
+//[ExecuteInEditMode]
 public class Bezier : MonoBehaviour
 {
     public bool leftBezier;
@@ -23,25 +23,29 @@ public class Bezier : MonoBehaviour
 
     private void Update()
     {
-        if (leftBezier)
+        if (!GameManager.Instance.endSwipe)
         {
-            bezierPointListObjects[0].transform.position = _mover.leftParent
-                .transform.GetChild(_mover.leftParent.transform.childCount - 1)
-                .transform.position + new Vector3(0, 0.1f, 0);
-            bezierPointListObjects[3].transform.position = _mover.rightParent
-                .transform.GetChild(_mover.rightParent.transform.childCount - 1)
-                .transform.position + new Vector3(0, 0.1f, 0); 
-        }
+            if (leftBezier)
+            {
+                bezierPointListObjects[0].transform.position = _mover.leftParent
+                    .transform.GetChild(_mover.leftParent.transform.childCount - 1)
+                    .transform.position + new Vector3(0, 0.1f, 0);
+                bezierPointListObjects[3].transform.position = _mover.rightParent
+                    .transform.GetChild(_mover.rightParent.transform.childCount - 1)
+                    .transform.position + new Vector3(0, 0.1f, 0); 
+            }
 
-        if (rightBezier)
-        {
-            bezierPointListObjects[0].transform.position = _mover.rightParent
-                .transform.GetChild(_mover.rightParent.transform.childCount - 1)
-                .transform.position + new Vector3(0, 0.1f, 0);
-            bezierPointListObjects[3].transform.position = _mover.leftParent
-                .transform.GetChild(_mover.leftParent.transform.childCount - 1)
-                .transform.position + new Vector3(0, 0.1f, 0);
+            if (rightBezier)
+            {
+                bezierPointListObjects[0].transform.position = _mover.rightParent
+                    .transform.GetChild(_mover.rightParent.transform.childCount - 1)
+                    .transform.position + new Vector3(0, 0.1f, 0);
+                bezierPointListObjects[3].transform.position = _mover.leftParent
+                    .transform.GetChild(_mover.leftParent.transform.childCount - 1)
+                    .transform.position + new Vector3(0, 0.1f, 0);
+            }
         }
+        
         
         SetBezier();
     }

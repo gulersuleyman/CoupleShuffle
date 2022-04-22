@@ -8,8 +8,12 @@ public class LastPoint : MonoBehaviour
     
     void Update()
     {
-        transform.position = parent.transform
-            .GetChild(parent.transform.childCount - 1).transform.position
-            + new Vector3(0,0.1f,0);
+        if (GameManager.Instance.began && !GameManager.Instance.endSwipe)
+        {
+            transform.position = parent.transform
+                                     .GetChild(parent.transform.childCount - 1).transform.position
+                                 + new Vector3(0,0.1f,0);
+        }
+        
     }
 }

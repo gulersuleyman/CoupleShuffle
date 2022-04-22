@@ -24,24 +24,28 @@ public class Money : MonoBehaviour
 
     private void Update()
     {
-        if (_mover.moveLeft && this.gameObject==_mover.leftParent.transform.GetChild(_mover.leftParent.transform.childCount-1).gameObject)
+        if (!GameManager.Instance.endSwipe)
         {
-            currentTime += Time.deltaTime;
-            if (currentTime>timeBoundary)
+            if (_mover.moveLeft && this.gameObject==_mover.leftParent.transform.GetChild(_mover.leftParent.transform.childCount-1).gameObject)
             {
-                StartCoroutine(MoveToRight());
-                currentTime = 0;
+                currentTime += Time.deltaTime;
+                if (currentTime>timeBoundary)
+                {
+                    StartCoroutine(MoveToRight());
+                    currentTime = 0;
+                }  
+            }
+            if (_mover.moveRight && this.gameObject==_mover.rightParent.transform.GetChild(_mover.rightParent.transform.childCount-1).gameObject)
+            {
+                currentTime += Time.deltaTime;
+                if (currentTime>timeBoundary)
+                {
+                    StartCoroutine(MoveToLeft());
+                    currentTime = 0;
+                }  
             }  
         }
-        if (_mover.moveRight && this.gameObject==_mover.rightParent.transform.GetChild(_mover.rightParent.transform.childCount-1).gameObject)
-        {
-            currentTime += Time.deltaTime;
-            if (currentTime>timeBoundary)
-            {
-                StartCoroutine(MoveToLeft());
-                currentTime = 0;
-            }  
-        }
+        
     }
 
     IEnumerator MoveToRight()

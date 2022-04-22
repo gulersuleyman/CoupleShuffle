@@ -19,10 +19,12 @@ public class MoneyMover : MonoBehaviour
    
     private DynamicJoystick _joystick;
     private AnimationController _animController;
+    
     private void Awake()
     {
         _joystick = FindObjectOfType<DynamicJoystick>();
         _animController = FindObjectOfType<AnimationController>();
+        
     }
 
     private void Update()

@@ -6,11 +6,7 @@
       <change beforePath="$PROJECT_DIR$/Assets/AnimatorControllers/leftAnim.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AnimatorControllers/leftAnim.controller" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/AnimatorControllers/rightAnim.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AnimatorControllers/rightAnim.controller" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Bezier.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Bezier.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/CharacterController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/CharacterController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/LastPoint.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/LastPoint.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Money.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Money.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/MoneyMover.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/MoneyMover.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -83,7 +79,7 @@
       <workItem from="1650551414603" duration="27000" />
       <workItem from="1650551514172" duration="15076000" />
       <workItem from="1650619808666" duration="6893000" />
-      <workItem from="1650629223132" duration="5965000" />
+      <workItem from="1650629223132" duration="7074000" />
     </task>
     <servers />
   </component>

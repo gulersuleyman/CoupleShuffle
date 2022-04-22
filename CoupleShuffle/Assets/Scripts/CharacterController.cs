@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Cinemachine;
 using UnityEngine;
 using DG.Tweening;
 public class CharacterController : MonoBehaviour
@@ -8,14 +9,18 @@ public class CharacterController : MonoBehaviour
     [SerializeField] private float moveSpeed;
     [SerializeField] GameObject caseParent;
     
+    
     public bool caseTime = false;
 
-
+    private CinemachineVirtualCamera _vcam;
     private AnimationController _animationController;
-
+    private JoyStickRotator _joyStickRotator;
     private void Awake()
     {
         _animationController = GetComponent<AnimationController>();
+        _vcam = FindObjectOfType<CinemachineVirtualCamera>();
+        _joyStickRotator = FindObjectOfType<JoyStickRotator>();
+        _joyStickRotator.Working = false;
     }
 
     void Update()
@@ -50,7 +55,18 @@ public class CharacterController : MonoBehaviour
             {
                 m.gameObject.transform.parent = caseParent.transform.GetChild(0).gameObject.transform;
                 m.gameObject.SetActive(false);
+                _animationController.WalkAnimation(_animationController._leftAnim,true);
+                _animationController.WalkAnimation(_animationController._rightAnim,true);
+
+                transform.DOMove(caseParent.transform.position, 2f).OnComplete(() =>
+                {
+                    transform.parent = caseParent.transform;
+                    _joyStickRotator.Working = true;
+                });
+
             });
         }
     }
+
+    
 }

@@ -5,56 +5,59 @@ using UnityEngine;
 using DG.Tweening;
 public class MoneyMover : MonoBehaviour
 {
+    
     public GameObject leftParent;
     public GameObject rightParent;
+
     
-    
+    public bool moveLeft;
+    public bool moveRight;
+
+   
     private DynamicJoystick _joystick;
-    private Bezier _bezier;
-    
+    private Bezier _leftBezier;
+    private Bezier _rightBezier;
     private void Awake()
     {
         _joystick = FindObjectOfType<DynamicJoystick>();
-        _bezier = FindObjectOfType<Bezier>();
+        
     }
-
 
     private void Update()
     {
+        _leftBezier = GameObject.Find("LeftBezierParent").gameObject.GetComponent<Bezier>();
+        _rightBezier = GameObject.Find("RightBezierParent").gameObject.GetComponent<Bezier>();
+        
+        
         if (Input.GetMouseButton(0))
         {
             if (_joystick.Horizontal > 0)
             {
-                StartCoroutine(JumpToRight());
+                moveLeft = true;
+                
             }
-            else if(_joystick.Horizontal < 0)
+            else
             {
-               
+                moveLeft = false;
             }
-        }
-    }
 
-    IEnumerator StartJumpToRight()
-    {
-        GameObject currentObject = leftParent.transform.GetChild(leftParent.transform.childCount - 1).gameObject;
-        
-        for (int i = 0; i < 100; i++)
+            if (_joystick.Horizontal < 0)
+            {
+                Debug.Log(_joystick.Horizontal);
+                moveRight = true;
+            }
+            else
+            {
+                moveRight = false;
+            }
+            
+        }
+
+        if (Input.GetMouseButtonUp(0))
         {
-            currentObject.transform.position = _bezier.lineRenderer.GetPosition(i);
-            yield return new WaitForSeconds(0.001f);
+            moveLeft = false;
+            moveRight = false;
         }
-        
-        currentObject.transform.parent = rightParent.transform;
-        
-        yield return null;
-
     }
 
-    IEnumerator JumpToRight()
-    {
-        StartCoroutine(StartJumpToRight());
-        yield return new WaitForSeconds(0.2f);
-    }
-
-    
 }

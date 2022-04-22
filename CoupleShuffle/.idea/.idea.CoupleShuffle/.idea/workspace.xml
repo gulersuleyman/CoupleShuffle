@@ -4,10 +4,8 @@
     <list default="true" id="5f2ace3c-4544-4b13-805a-7091ddaf1b1d" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.CoupleShuffle/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.CoupleShuffle/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/CharacterController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/CharacterController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Bezier.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Bezier.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/MoneyMover.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/MoneyMover.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/DynamicsManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/DynamicsManager.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -76,7 +74,8 @@
       <workItem from="1650551064242" duration="102000" />
       <workItem from="1650551348730" duration="14000" />
       <workItem from="1650551414603" duration="27000" />
-      <workItem from="1650551514172" duration="14949000" />
+      <workItem from="1650551514172" duration="15076000" />
+      <workItem from="1650619808666" duration="6360000" />
     </task>
     <servers />
   </component>

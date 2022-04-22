@@ -58,16 +58,47 @@ public class Money : MonoBehaviour
         if (move)
         {
             this.gameObject.transform.parent = movingParent.gameObject.transform;
-            for (int i = 0; i < 100; i++)
+            int i = 0;
+            while (i<100 && i>=0)
             {
                 this.gameObject.transform.position = _leftBezier.lineRenderer.GetPosition(i);
                 this.gameObject.transform.eulerAngles = new Vector3(0, 0, -i -i+18);
+                
+                if (_mover.moveLeft)
+                {
+                    i++;
+                }
+                else if(_mover.moveRight)
+                {
+                    i--;
+                }
+                else
+                {
+                    if (_mover.lastDirectionIndex==1)
+                    {
+                        i++;
+                    }
+                    else
+                    {
+                        i--;
+                    }
+                    
+                }
                 yield return new WaitForSeconds(0.01f);
             }
+           
+           if (i==99)
+           {
+               this.gameObject.transform.parent = _mover.rightParent.transform; 
+           }
 
-            this.gameObject.transform.parent = _mover.rightParent.transform;
+           if (i==0)
+           {
+               this.gameObject.transform.parent = _mover.leftParent.transform;
+           }
+            
         }
-        
+        this.gameObject.transform.eulerAngles=Vector3.zero;
         
         yield return new WaitForSeconds(0.2f);
     }
@@ -85,16 +116,47 @@ public class Money : MonoBehaviour
         if (move)
         {
             this.gameObject.transform.parent = movingParent.gameObject.transform;
-            for (int i = 0; i < 100; i++)
+            int i = 0;
+            while (i<100 && i>=0)
             {
                 this.gameObject.transform.position = _rightBezier.lineRenderer.GetPosition(i);
                 this.gameObject.transform.eulerAngles = new Vector3(0, 0, +i +i-18);
+                
+                if (_mover.moveRight)
+                {
+                    i++;
+                }
+                else if(_mover.moveLeft)
+                {
+                    i--;
+                }
+                else
+                {
+                    if (_mover.lastDirectionIndex==2)
+                    {
+                        i++;
+                    }
+                    else
+                    {
+                        i--;
+                    }
+                    
+                }
                 yield return new WaitForSeconds(0.01f);
             }
+           
+           if (i==99)
+           {
+               this.gameObject.transform.parent = _mover.leftParent.transform;  
+           }
 
-            this.gameObject.transform.parent = _mover.leftParent.transform;
+           if (i==0)
+           {
+               this.gameObject.transform.parent = _mover.rightParent.transform;
+           }
+            
         }
-        
+        this.gameObject.transform.eulerAngles=Vector3.zero;
         yield return new WaitForSeconds(0.2f);
     }
 

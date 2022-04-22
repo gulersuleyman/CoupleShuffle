@@ -9,14 +9,14 @@ public class MoneyMover : MonoBehaviour
     public GameObject leftParent;
     public GameObject rightParent;
 
+    public float lastDirectionIndex;
     
     public bool moveLeft;
     public bool moveRight;
 
    
     private DynamicJoystick _joystick;
-    private Bezier _leftBezier;
-    private Bezier _rightBezier;
+    
     private void Awake()
     {
         _joystick = FindObjectOfType<DynamicJoystick>();
@@ -25,16 +25,13 @@ public class MoneyMover : MonoBehaviour
 
     private void Update()
     {
-        _leftBezier = GameObject.Find("LeftBezierParent").gameObject.GetComponent<Bezier>();
-        _rightBezier = GameObject.Find("RightBezierParent").gameObject.GetComponent<Bezier>();
-        
         
         if (Input.GetMouseButton(0))
         {
             if (_joystick.Horizontal > 0)
             {
                 moveLeft = true;
-                
+                lastDirectionIndex = 1;
             }
             else
             {
@@ -43,7 +40,7 @@ public class MoneyMover : MonoBehaviour
 
             if (_joystick.Horizontal < 0)
             {
-                Debug.Log(_joystick.Horizontal);
+                lastDirectionIndex = 2;
                 moveRight = true;
             }
             else

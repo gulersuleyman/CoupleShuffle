@@ -1669,8 +1669,8 @@ LineRenderer:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
-        time: 0.050746918
-        value: 0.06081009
+        time: 0
+        value: 0
         inSlope: 0
         outSlope: 0
         tangentMode: 0
@@ -2174,8 +2174,8 @@ LineRenderer:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
-        time: 0.050746918
-        value: 0.06081009
+        time: 0
+        value: 0
         inSlope: 0
         outSlope: 0
         tangentMode: 0
@@ -3342,6 +3342,30 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1289375827}
     m_Modifications:
+    - target: {fileID: 691580591938408902, guid: 9fd7bce2330f92449b07ca713d751e1d, type: 3}
+      propertyPath: snapX
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 691580591938408902, guid: 9fd7bce2330f92449b07ca713d751e1d, type: 3}
+      propertyPath: snapY
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 691580591938408902, guid: 9fd7bce2330f92449b07ca713d751e1d, type: 3}
+      propertyPath: deadZone
+      value: 0.01
+      objectReference: {fileID: 0}
+    - target: {fileID: 691580591938408902, guid: 9fd7bce2330f92449b07ca713d751e1d, type: 3}
+      propertyPath: axisOptions
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 691580591938408902, guid: 9fd7bce2330f92449b07ca713d751e1d, type: 3}
+      propertyPath: handleRange
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 691580591938408902, guid: 9fd7bce2330f92449b07ca713d751e1d, type: 3}
+      propertyPath: moveThreshold
+      value: 0.1
+      objectReference: {fileID: 0}
     - target: {fileID: 8135886326569738822, guid: 9fd7bce2330f92449b07ca713d751e1d, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -3553,7 +3577,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
-  m_LocalRotation: {x: 0.17546423, y: -0.000000008469722, z: 0.0000000015095527, w: 0.9844858}
+  m_LocalRotation: {x: 0.17546421, y: 0.0000000084697165, z: -0.0000000015095514, w: 0.9844858}
   m_LocalPosition: {x: 0, y: 0.29999995, z: -5.5230002}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -5118,7 +5142,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1511448506}
-  m_LocalRotation: {x: 0.17546423, y: -0.000000008469722, z: 0.0000000015095527, w: 0.9844858}
+  m_LocalRotation: {x: 0.17546421, y: 0.0000000084697165, z: -0.0000000015095514, w: 0.9844858}
   m_LocalPosition: {x: 0, y: 0.29999995, z: -5.5230002}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:

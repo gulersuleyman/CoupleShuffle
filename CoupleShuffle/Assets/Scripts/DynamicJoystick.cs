@@ -8,6 +8,7 @@ public class DynamicJoystick : Joystick
     public float MoveThreshold { get { return moveThreshold; } set { moveThreshold = Mathf.Abs(value); } }
 
     [SerializeField] private float moveThreshold = 1;
+    
 
     protected override void Start()
     {
@@ -16,8 +17,10 @@ public class DynamicJoystick : Joystick
         background.gameObject.SetActive(false);
     }
 
+    
     public override void OnPointerDown(PointerEventData eventData)
     {
+    
         background.anchoredPosition = ScreenPointToAnchoredPosition(eventData.position);
         background.gameObject.SetActive(true);
         base.OnPointerDown(eventData);

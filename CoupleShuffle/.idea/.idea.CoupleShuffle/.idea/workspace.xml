@@ -3,8 +3,11 @@
   <component name="ChangeListManager">
     <list default="true" id="5f2ace3c-4544-4b13-805a-7091ddaf1b1d" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.CoupleShuffle/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.CoupleShuffle/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AnimatorControllers/leftAnim.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AnimatorControllers/leftAnim.controller" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AnimatorControllers/rightAnim.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AnimatorControllers/rightAnim.controller" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Bezier.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Bezier.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/DynamicJoystick.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/DynamicJoystick.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Money.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Money.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/MoneyMover.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/MoneyMover.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -75,7 +78,8 @@
       <workItem from="1650551348730" duration="14000" />
       <workItem from="1650551414603" duration="27000" />
       <workItem from="1650551514172" duration="15076000" />
-      <workItem from="1650619808666" duration="6360000" />
+      <workItem from="1650619808666" duration="6893000" />
+      <workItem from="1650629223132" duration="1916000" />
     </task>
     <servers />
   </component>

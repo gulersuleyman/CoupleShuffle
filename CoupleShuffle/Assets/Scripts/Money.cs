@@ -87,12 +87,12 @@ public class Money : MonoBehaviour
                 yield return new WaitForSeconds(0.01f);
             }
            
-           if (i==99)
+           if (i==100)
            {
                this.gameObject.transform.parent = _mover.rightParent.transform; 
            }
 
-           if (i==0)
+           if (i<0)
            {
                this.gameObject.transform.parent = _mover.leftParent.transform;
            }
@@ -145,12 +145,12 @@ public class Money : MonoBehaviour
                 yield return new WaitForSeconds(0.01f);
             }
            
-           if (i==99)
+           if (i==100)
            {
                this.gameObject.transform.parent = _mover.leftParent.transform;  
            }
 
-           if (i==0)
+           if (i<0)
            {
                this.gameObject.transform.parent = _mover.rightParent.transform;
            }

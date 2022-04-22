@@ -63,6 +63,7 @@ public class Money : MonoBehaviour
         {
             this.gameObject.transform.parent = movingParent.gameObject.transform;
             int i = 0;
+            GameManager.Instance.DecreaseLeftScore(1);
             while (i<100 && i>=0)
             {
                 this.gameObject.transform.position = _leftBezier.lineRenderer.GetPosition(i);
@@ -94,11 +95,13 @@ public class Money : MonoBehaviour
            if (i==100)
            {
                this.gameObject.transform.parent = _mover.rightParent.transform; 
+               GameManager.Instance.IncreaseRightScore(1);
            }
 
            if (i<0)
            {
                this.gameObject.transform.parent = _mover.leftParent.transform;
+               GameManager.Instance.IncreaseLeftScore(1);
            }
             
         }
@@ -121,6 +124,7 @@ public class Money : MonoBehaviour
         {
             this.gameObject.transform.parent = movingParent.gameObject.transform;
             int i = 0;
+            GameManager.Instance.DecreaseRightScore(1);
             while (i<100 && i>=0)
             {
                 this.gameObject.transform.position = _rightBezier.lineRenderer.GetPosition(i);
@@ -151,12 +155,14 @@ public class Money : MonoBehaviour
            
            if (i==100)
            {
-               this.gameObject.transform.parent = _mover.leftParent.transform;  
+               this.gameObject.transform.parent = _mover.leftParent.transform;
+               GameManager.Instance.IncreaseLeftScore(1);
            }
 
            if (i<0)
            {
                this.gameObject.transform.parent = _mover.rightParent.transform;
+               GameManager.Instance.IncreaseRightScore(1);
            }
             
         }

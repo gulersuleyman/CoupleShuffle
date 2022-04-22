@@ -4,15 +4,21 @@ using System.Collections.Generic;
 using Cinemachine;
 using UnityEngine;
 using DG.Tweening;
+using UnityEngine.UI;
 public class CharacterController : MonoBehaviour
 {
+    public Text leftText;
+    public Text rightText;
+    
     [SerializeField] private float moveSpeed;
     [SerializeField] GameObject caseParent;
-    
+    [SerializeField] private GameObject leftCanvas;
+    [SerializeField] private GameObject rightCanvas;
     
     public bool caseTime = false;
 
-    
+    private int leftCount = 4;
+    private int rightCount = 4;
     
     private CinemachineVirtualCamera _vcam;
     private AnimationController _animationController;
@@ -25,6 +31,23 @@ public class CharacterController : MonoBehaviour
         _vcam = FindObjectOfType<CinemachineVirtualCamera>();
         _joyStickRotator = FindObjectOfType<JoyStickRotator>();
         _joyStickRotator.Working = false;
+    }
+
+    private void Start()
+    {
+        
+        GameManager.Instance.OnLeftScoreChanged += HandleOnLeftScoreChanged;
+        GameManager.Instance.OnRightScoreChanged += HandleOnRightScoreChanged;
+        HandleOnLeftScoreChanged(1);
+        HandleOnRightScoreChanged(1);
+        leftText.text = leftCount.ToString();
+        rightText.text = rightCount.ToString();
+    }
+
+    private void OnDisable()
+    {
+        GameManager.Instance.OnLeftScoreChanged -= HandleOnLeftScoreChanged;
+        GameManager.Instance.OnRightScoreChanged -= HandleOnRightScoreChanged;
     }
 
     void Update()
@@ -44,8 +67,11 @@ public class CharacterController : MonoBehaviour
             GameManager.Instance.endSwipe = true;
             _animationController.IdleAnimation(_animationController._leftAnim,true);
             _animationController.IdleAnimation(_animationController._rightAnim,true);
-            
+            leftCanvas.gameObject.SetActive(false);
+            rightCanvas.gameObject.SetActive(false);
             MoveMoniesToCase();
+            GameManager.Instance.totalScore = GameManager.Instance.rightScore + GameManager.Instance.leftScore;
+            Debug.Log(GameManager.Instance.totalScore);
         }
     }
 
@@ -83,10 +109,18 @@ public class CharacterController : MonoBehaviour
                 _joyStickRotator.Working = true; 
                 _animationController.BendAnimation(_animationController._leftAnim,true);
                 _animationController.BendAnimation(_animationController._rightAnim,true);
-                _vcam.Follow = null;
+                _vcam.Follow = caseParent.transform;
             });
        
     }
 
+    public void HandleOnLeftScoreChanged(int i)
+    {
+        leftText.text = GameManager.Instance.leftScore.ToString();
+    }
+    public void HandleOnRightScoreChanged(int i)
+    {
+        rightText.text = GameManager.Instance.rightScore.ToString();
+    }
     
 }

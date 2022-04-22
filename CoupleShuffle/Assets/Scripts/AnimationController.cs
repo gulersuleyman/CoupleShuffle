@@ -34,4 +34,10 @@ public class AnimationController : MonoBehaviour
 
         _animator.SetBool("isBending", isBending);
     }
+    public void HoldWalkAnimation(Animator _animator,bool isHoldWalking)
+    {
+        if (isHoldWalking == _animator.GetBool("isHoldWalking")) return;
+
+        _animator.SetBool("isHoldWalking", isHoldWalking);
+    }
 }

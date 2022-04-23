@@ -3,10 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="5f2ace3c-4544-4b13-805a-7091ddaf1b1d" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.CoupleShuffle/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.CoupleShuffle/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/MoneyMover.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/MoneyMover.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Door.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Door.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -79,7 +76,7 @@
       <workItem from="1650551514172" duration="15076000" />
       <workItem from="1650619808666" duration="6893000" />
       <workItem from="1650629223132" duration="18976000" />
-      <workItem from="1650709085405" duration="9369000" />
+      <workItem from="1650709085405" duration="10015000" />
     </task>
     <servers />
   </component>

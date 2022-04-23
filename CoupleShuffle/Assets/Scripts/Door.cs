@@ -195,7 +195,7 @@ public class Door : MonoBehaviour
                     ,parent.transform);
             }
         }
-        else if (score<parent.transform.childCount-2)
+        else if (score<parent.transform.childCount-2 && score!=0)
         {
             int missing = parent.transform.childCount - 1 - score;
             for (int i = 0; i < missing; i++)

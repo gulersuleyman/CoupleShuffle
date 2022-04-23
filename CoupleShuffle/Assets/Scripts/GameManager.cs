@@ -43,6 +43,10 @@ public class GameManager : MonoBehaviour
     public void DecreaseLeftScore(int i)
     {
         leftScore -= i;
+        if (leftScore<=0)
+        {
+            leftScore = 0;
+        }
         OnLeftScoreChanged?.Invoke(leftScore);
     }
     public void IncreaseRightScore(int i)
@@ -53,6 +57,10 @@ public class GameManager : MonoBehaviour
     public void DecreaseRightScore(int i)
     {
         rightScore -= i;
+        if (rightScore<=0)
+        {
+            rightScore = 0;
+        }
         OnRightScoreChanged?.Invoke(rightScore);
     }
 

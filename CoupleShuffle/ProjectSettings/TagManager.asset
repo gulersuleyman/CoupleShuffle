@@ -6,6 +6,8 @@ TagManager:
   tags:
   - Case
   - Spend
+  - Door
+  - Char
   layers:
   - Default
   - TransparentFX

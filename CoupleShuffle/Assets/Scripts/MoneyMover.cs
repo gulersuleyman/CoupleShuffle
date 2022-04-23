@@ -5,7 +5,7 @@ using UnityEngine;
 using DG.Tweening;
 public class MoneyMover : MonoBehaviour
 {
-    
+    public GameObject moneyPrefab;
     public GameObject leftParent;
     public GameObject rightParent;
 
